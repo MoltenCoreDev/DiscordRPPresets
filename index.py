@@ -2,9 +2,16 @@ import pypresence
 from time import sleep
 import json
 
-presence = pypresence.Presence('809886974503551056')
 
-presetPath="/home/molten/Documents/Presets"
+
+f = open("./config.json", "r")
+config = json.loads(f.read())
+f.close()
+
+
+presence = pypresence.Presence(config.get("id"))
+
+presetPath=config.get("presetPath")
 presetData = {
         
 }
