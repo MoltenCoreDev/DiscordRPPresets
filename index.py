@@ -10,6 +10,7 @@ f.close()
 
 
 presence = pypresence.Presence(config.get("id"))
+presence.connect()
 
 presetPath=config.get("presetPath")
 presetData = {
@@ -40,7 +41,6 @@ def load(preset):
     f = open(presetPath + "/" + preset + ".json", 'r')
     presetData = json.loads(f.read())
     f.close()
-    presence.connect()
     presence.update(large_image=presetData.get("large_image"), large_text=presetData.get("large_text"), small_image=presetData.get("small_image"), small_text=presetData.get("small_text"), state=presetData.get("state"), details=presetData.get("details"))
 
 while True:
