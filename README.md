@@ -1,4 +1,4 @@
-# Molten's discord custom presence
+# Molten's discord custom presence support server and stuff: https://discord.gg/vgxjJW2rRH
 This program adds functionality of creating presets for discord presences
 # Installation
 I haven't decided how to install it rn
